@@ -1,4 +1,4 @@
-#require "./app.rb"
+
 require "spec_helper"
 
 describe "Home page" do 
@@ -7,20 +7,20 @@ describe "Home page" do
 
     expect(last_response).to be_ok
   end
-  it "has a button" do
+  xit "has a button" do
     visit "/"
-    page.has_button?
+    expect(page).to have_css('input')
   end
 end
 describe "Game page" do
   it "exists" do
-    get "/Game"
+    get "/game"
 
     expect(last_response).to be_ok
   end
   it "has a table" do
-    visit "/Game"
+    get "/game"
 
-    page.has_table?
+    expect(page).to have_css('form')
   end
 end
