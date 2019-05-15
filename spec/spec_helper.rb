@@ -7,14 +7,15 @@ require 'capybara/dsl'
 require 'rspec'
 require './app'
 
-Capybara.app = Sinatra::Application 
+Capybara.app = Tictactoe
 def app
-  Tictactoe
+  Rack::Builder.parse_file('config.ru').first
 end
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include Capybara::DSL
+  config.order = "default"
   #config.include Capybara::RSpecMatchers
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
