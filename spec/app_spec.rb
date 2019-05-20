@@ -29,4 +29,12 @@ describe "Game page" do
 
     expect(page.all("table#board td").count).to eq 9
   end
+
+  it "puts an x in the table" do
+    visit "/game"
+
+    click_button "top_left"
+
+    expect(page.find(id:"top_left")).to have_content("x")
+  end
 end

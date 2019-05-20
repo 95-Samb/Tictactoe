@@ -1,21 +1,22 @@
-<form>
-  <table id="board">
-	  <tr>
-    <td>First Row</td>
-    <td>text</td>
-    <td>text</td>
-	  </tr>
-    <tr>
-	  <td>Second Row</td>
-    <td>text</td>
-    <td>text</td>
-    </tr>
-    <tr>
-    <td>Third row</td>
-    <td>text</td>
-    <td>text</td>
-    </tr>
-  </table>
+<form action="/game" method="post">
+  <input type="hidden" name="_method" value="PUT">
+    <table id="board">
+      <tr>
+      <td id="top_left"><input type="submit" value="top_left"></td>
+      <td>-</td>
+      <td>-</td>
+      </tr>
+      <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      </tr>
+      <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      </tr>
+    </table>
 </form>
 
 <a href="/">
