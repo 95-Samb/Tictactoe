@@ -35,6 +35,16 @@ describe "Game page" do
 
     click_button "top_left"
 
-    expect(page.find(id:"top_left")).to have_content("x")
+    expect(page.find_by_id("top_left")).to have_content("x")
+  end
+
+  xit "puts an x in the table at a different position" do
+    visit "/game"
+
+    within "table#board" do
+      click_button "top_right"
+    end
+
+    expect(page.find(id: "top_right")).to have_content("x")
   end
 end

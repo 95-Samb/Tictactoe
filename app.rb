@@ -8,12 +8,11 @@ class Tictactoe < Sinatra::Base
   end
 
   get "/game" do
-    erb :game
+    erb :top_left_button, :layout => :game
   end
 
-  post "/game" do
-    erb :game2
+  put "/game" do
+    erb :top_left_x , :layout => :game
   end
-
 
 end

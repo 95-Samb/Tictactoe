@@ -1,23 +1,26 @@
-<form action="/game" method="post">
-  <input type="hidden" name="_method" value="PUT">
-    <table id="board">
-      <tr>
-      <td id="top_left"><input type="submit" value="top_left"></td>
-      <td>-</td>
-      <td>-</td>
-      </tr>
-      <tr>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      </tr>
-      <tr>
-      <td>-</td>
-      <td>-</td>
-      <td>-</td>
-      </tr>
-    </table>
-</form>
+
+<div>
+  <form  method="post" action="/game">
+    <input type="hidden" name="_method" value="put">
+      <table id="board">
+        <tr>
+        <td id="top_left"><%= yield %></td>
+        <td id="top_middle">-</td>
+        <td id="top_right">-</td>
+        </tr>
+        <tr>
+        <td id="middle_left">-</td>
+        <td id="middle_middle">-</td>
+        <td id="middle_right">-</td>
+        </tr>
+        <tr>
+        <td id="bottom_left">-</td>
+        <td id="bottom_middle">-</td>
+        <td id="bottom_right">-</td>
+        </tr>
+      </table>
+  </form>
+</div>
 
 <a href="/">
 <input type="submit" value="Home">
